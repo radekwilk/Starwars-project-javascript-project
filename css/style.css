@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
+/* General settings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #ccc;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+/* End of general settings */
+
+/* Home page */
+.home-container {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(../img/sw-bg-2.jpg) no-repeat center;
+  background-size: cover;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-heading {
+  font-size: 6rem;
+  text-align: center;
+  padding-top: 8rem;
+  margin-bottom: 4rem;
+  text-transform: capitalize;
+  text-shadow: 0.2rem 0.2rem 0.3rem rgba(250, 250, 250, 0.5);
+}
+
+.option-container {
+  /* position: absolute;
+  left: 50%;
+  bottom: 3rem;
+  transform: translateX(-50%);
+  width: 60%; */
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.container-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-shadow: 0.1rem 0.1rem 0.1rem rgba(250, 250, 250, 0.5);
+  text-align: center;
+}
+
+.form {
+  color: #ccc;
+  width: 40%;
+  margin: 0 auto;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(230, 230, 230, 0.1);
+  padding: 2.5rem 3rem;
+  border: 1px solid rgba(230, 230, 230, 0.3);
+  border-radius: 1rem;
+}
+
+.form-heading {
+  font-size: 2.4rem;
+}
+
+.form-field {
+  font-family: "Noto Sans JP", sans-serif;
+  width: 100%;
+  height: 3.5rem;
+  font-size: 1.6rem;
+  color: #ccc;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid rgba(230, 230, 230, 0.3);
+  border-radius: 0.3rem;
+}
+
+.form-btn {
+  cursor: pointer;
+  transition: all 0.9s;
+}
+
+.form-btn:hover {
+  color: black;
+  background-color: #ccc;
+  opacity: 0.8;
+  outline: none;
+}
+
+.form-select {
+  padding-left: 25%;
+}
+
+.form-option {
+  background-color: rgb(54, 54, 54);
+}
+/* End of Home page */
+
+/* Results page */
+.closing-menu {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 50;
+}
+
+.closing-menu:hover {
+  cursor: pointer;
+}
+
+.closing-menu span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ccc;
+  z-index: 200;
+  transform: scale(0.8);
+  transition: all 0.4s;
+}
+
+.closing-menu:hover span {
+  color: #fff;
+  transform: scale(1);
+}
+
+.results {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 1s;
+  z-index: 100;
+}
+
+.change .results {
+  transform: scale(1);
+  transform-origin: top right;
+}
+
+.results-container {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 6rem auto;
+  border: 0.3rem solid rgba(250, 250, 250, 0.1);
+  border-radius: 1rem;
+  padding: 4rem;
+}
+
+.results-heading {
+  font-size: 2.5rem;
+}
+
+.results-wrapper {
+  width: 100%;
+}
+
+.field-holder {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: 1.5rem auto;
+}
+
+.field-holder span {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  padding: 0.5rem 2rem;
+  width: 13rem;
+}
+
+.field-holder p {
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 30rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+.field-btn {
+  width: 25rem;
+  margin: 2.5rem 0 0 25rem;
+  background-color: rgba(250, 250, 250, 0.1);
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0.5rem 2rem;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.field-btn:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.results-people {
+  display: none;
+}
+
+.results-planets {
+  display: none;
+}
+
+.results-starships {
+  display: none;
+}
+
+.results-species {
+  display: none;
+}
+
+.show.results-people {
+  display: block;
+}
+
+.show.results-planets {
+  display: block;
+}
+
+.show.results-starships {
+  display: block;
+}
+
+.show.results-species {
+  display: block;
+}
+/* Results page */
+
+/* REsponsive design */
+
+/* for screens with max-width of 1200px */
+@media only screen and (max-width: 1200px) {
+  .section-heading {
+    font-size: 4.5rem;
+    padding-top: 6rem;
+  }
+
+  .option-container {
+    bottom: 2rem;
+    width: 75%;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  .results-container {
+    padding: 3rem;
+  }
+
+  .results-heading {
+    font-size: 2.2rem;
+  }
+
+  .field-holder {
+    width: 80%;
+  }
+
+  .field-btn {
+    width: 24rem;
+    margin: 2.5rem 0 0 21rem;
+  }
+}
+
+/*  For devices with max screen width 900px*/
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 56.25%; /* 1rem = 9px */
+  }
+
+  .form-select {
+    padding-left: 30%;
+  }
+
+  .section-heading {
+    padding: 4rem 1rem 0 1rem;
+  }
+
+  .container-heading {
+    font-size: 2.4rem;
+  }
+
+  .option-container {
+    width: 80%;
+  }
+
+  .container-heading {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+  }
+
+  .form {
+    width: 75%;
+  }
+  .results {
+    min-height: 100vh;
+    max-height: 150vh;
+  }
+
+  .closing-menu {
+    width: 2rem;
+    top: 1rem;
+    right: 3rem;
+  }
+
+  .results-container {
+    width: 90%;
+    padding: 2rem;
+    margin: 8rem auto;
+  }
+
+  .field-btn {
+    width: 60%;
+    margin: 2rem auto;
+  }
+}
+
+/*  For devices with max screen width 600px*/
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%; /* 1rem = 8px */
+  }
+
+  .section-heading {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  .form {
+    width: 90%;
+    padding: 2.5rem 2rem;
+  }
+
+  .form-option {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .results-container {
+    padding: 1.5rem;
+  }
+
+  .results-wrapper {
+    padding: 1.5rem;
+  }
+  .field-holder {
+    width: 100%;
+  }
+}

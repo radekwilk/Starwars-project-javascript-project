@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Project - JS 201</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="home-container">
+        <section class="home">
+            <h1 class="section-heading">Star Wars Project - JavaScript 201</h1>
+            <div class="option-container">
+                <h2 class="container-heading">
+                    Select Star Wars random character, planet or starship
+                </h2>
+                <form action="" class="form">
+                    <h3 class="form-heading">Select your options</h3>
+                    <select name="starwars" id="starwars" class="form-select form-field">
+                        <option value="people" class="form-option">Star Wars characters</option>
+                        <option value="planets" class="form-option">Star Wars Planets</option>
+                        <option value="starships" class="form-option">Starships</option>
+                        <option value="species" class="form-option">Species</option>
+                    </select>
+                    <input type="button" class="form-btn form-field" id="select-btn" value="Select random">
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Here wee will get displayed results of random selection -->
+    <section class="results" id="results">
+        <!-- Hamburger menu -->
+        <div class="closing-menu">
+            <span>&times;</span>
+        </div>
+        <!-- End of Hamburger menu -->
+        <!-- Results container -->
+        <div class="results-container">
+            <h2 class="container-heading results-heading" id="results-heading">Randomly selected Star Wars character is:</h2>
+            <!-- People -->
+            <div class="results-wrapper results-people">
+
+                <div class="img-holder">
+                    <img src="" alt="" class="results-img">
+                </div>
+                <div class="field-holder">
+                    <span>Name: </span>
+                    <p id="ppl-name"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Birth Year: </span>
+                    <p id="ppl-bday"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Gender: </span>
+                    <p id="ppl-gender"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Height: </span>
+                    <p id="ppl-height"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Hair color: </span>
+                    <p id="ppl-hair"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Skin color: </span>
+                    <p id="ppl-skin"></p>
+                </div>
+
+                <div class="field-btn" id="btn-people">Select another character</div>
+
+            </div>
+            <!-- Planets -->
+            <div class="results-wrapper results-planets">
+                <div class="field-holder">
+                    <span>Name: </span>
+                    <p id="planet-name"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Population: </span>
+                    <p id="planet-population"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Terrain: </span>
+                    <p id="planet-terrain"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Climate: </span>
+                    <p id="planet-climate"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Diameter: </span>
+                    <p id="planet-diameter"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Gravity: </span>
+                    <p id="planet-gravity"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Rotation Period: </span>
+                    <p id="planet-rotation"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Orbital Period: </span>
+                    <p id="planet-orbital"></p>
+                </div>
+
+                <div class="field-btn" id="btn-planets">Select another planet</div>
+            </div>
+            <!-- Starships -->
+            <div class="results-wrapper results-starships">
+                <div class="field-holder">
+                    <span>Name: </span>
+                    <p id="ship-name"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Model: </span>
+                    <p id="ship-model"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Ship class: </span>
+                    <p id="ship-class"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Manufacturer: </span>
+                    <p id="ship-manufacturer"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Crew: </span>
+                    <p id="ship-crew"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Passengers: </span>
+                    <p id="ship-passengers"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Length: </span>
+                    <p id="ship-length"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Cargo capacity: </span>
+                    <p id="ship-cargo"></p>
+                </div>
+
+                <div class="field-btn" id="btn-starships">Select another starship</div>
+            </div>
+            <!-- Species -->
+            <div class="results-wrapper results-species">
+                <div class="field-holder">
+                    <span>Name: </span>
+                    <p id="species-name"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Classification: </span>
+                    <p id="species-classification"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Designation: </span>
+                    <p id="species-designation"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Avg height: </span>
+                    <p id="species-height"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Avg lifespan </span>
+                    <p id="species-lifespan"></p>
+                </div>
+                <div class="field-holder">
+                    <span>Language: </span>
+                    <p id="species-language"></p>
+                </div>            
+                <div class="field-btn" id="btn-species">Select another species</div>
+            </div>
+        </div>
+        <!-- End of results container -->
+    </section>
+</div>
+<script src="js/javascript_201.js"></script>    
+</body>
+</html>
